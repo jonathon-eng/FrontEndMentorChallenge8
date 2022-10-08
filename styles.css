@@ -302,9 +302,10 @@ picture{
 
 
 
-.attribution { font-size: 11px; text-align: center; 
-position: absolute;
-display: none;}
+.attribution { font-size: 20px; top: 50%; 
+position: relative;
+text-align: center;
+}
 .attribution a { color: hsl(228, 45%, 44%); }
 
 @media only screen and (min-width: 600px) {
