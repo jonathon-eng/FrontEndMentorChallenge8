@@ -309,8 +309,8 @@ text-align: center;
 .attribution a { color: hsl(228, 45%, 44%); }
 
 @media only screen and (min-width: 600px) {
-    body{
-        background-color: hsl(var(--Lightgrayishblue2));
+     body{
+        background-color: hsl(var(--Lightblue));
         
     }
     main {
