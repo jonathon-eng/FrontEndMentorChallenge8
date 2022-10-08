@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Notifications page</title>
+  <link rel="stylesheet" href="./styles.css">
+  
+  
+
+</head>
+<body>
+<main>
+  <div class=" padding-inline flex padding-block"> 
+    <div class="text-dark fs-600">
+      Notifications <span class="bg-blue text-white" id="notification">0</span>
+    </div>
+    <button class="fs-400 link">Mark all as read</button>
+  
+  </div>
+
+  <div>
+    <div class="container unread  flex flexD">
+      <picture>
+        <img src="./assets/images/avatar-mark-webber.webp" alt="profile picture">
+      </picture>
+      <div class="flex notificationBox ">
+        <div>
+          <span ><a class="name" href=#>Mark Webber</a></span>  reacted to your recent post <span ><a class="post" href="#">My first tournament today!</a></span> <span  id="dot" class="unreadDot"></span>
+        </div>
+        <div>1m ago</div>
+      </div>
+    </div>
+
+    <div class="container unread flex flexD">
+      <picture>
+        <img src="./assets/images/avatar-angela-gray.webp" alt="profile picture">
+      </picture>
+      <div class="flex notificationBox">
+        <div >
+          <span ><a class="name" href=#>Angela Gray</a></span> followed you <span  id="dot" class="unreadDot"></span></div> 
+        <div>5m ago</div>
+      </div>
+    </div>
+
+    <div class="container unread flex flexD">
+      <picture>
+        <img src="./assets/images/avatar-jacob-thompson.webp" alt="profile picture">
+      </picture>
+        <div class="flex notificationBox">
+          <div>
+            <span ><a class="name" href=#>Jacob Thompson</a></span> has joined your group <span ><a class="post" href="#">Chess Club</a> </span><span id="dot" class="unreadDot"></span>
+          </div>
+          <div>1 day ago</div>
+        </div>
+      </div>
+
+
+    <div class="container flex flexD">
+      <picture>
+        <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="profile picture">
+      </picture>
+      <div class="flex notificationBox">
+        <div>
+          <span ><a class="name" href=#>Rizky Hasanuddin</a></span>  sent you a private message
+        </div>
+        <div>5 days ago</div>
+        <div class="messages">
+          Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container flex flexD">
+      <picture>
+        <img src="./assets/images/avatar-kimberly-smith.webp" alt="profile picture">
+      </picture>
+      <div class="flex notificationBox">
+        <div>
+          <span ><a class="name" href=#>Kimberly Smith</a></span>  commented on your picture 
+        </div>
+        <div>1 week ago</div>
+      </div>
+      <div class="imageContent">
+        <a href="#">
+        <img src="./assets/images/image-chess.webp" alt="commented  picture">
+        </a>
+      </div>
+    </div>
+
+   
+      <div class="container flex flexD">
+        <picture>
+          <img src="./assets/images/avatar-nathan-peterson.webp" alt="profile picture">
+        </picture>
+        <div class="flex notificationBox">
+          <div>
+            <span ><a class="name" href=#>Nathan Peterson</a></span> reacted to your recent post <span ><a href=# class="post">5 end-game strategies to increase your win rate</a> </span>
+          </div>
+          <div>
+            2 weeks ago
+          </div>
+        </div>
+      </div>
+
+      <div class="container flex flexD">
+        <picture>
+          <img src="./assets/images/avatar-anna-kim.webp" alt="profile picture">
+        </picture>
+        <div class="flex notificationBox">
+          <div>
+            <span ><a class="name" href=#>Anna Kim</a></span>  left the group <span ><a href=# class="post">Chess Club</a> </span>
+          </div>
+          <div>2 weeks ago</div>
+        </div>
+      </div>
+  
+    </div>
+</main>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script defer src="script.js"></script>
+</body>
+</html>

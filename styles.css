@@ -1,0 +1,328 @@
+@font-face {
+    font-family: Jakarta-Sans;
+    src: url('./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('wght');
+    font-style: normal;
+    font-weight: 500 800;
+  }
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;800&display=swap');
+/* Use utility classes! They are extremely useful. */
+
+
+
+:root {
+    /* change depending on file */
+
+    /* colors */
+    --red: 1 90% 64%;
+    --blue: 219 85% 26%;
+    --white: 0 0% 100%;
+    --lightblue: 210 60% 98%;
+    --Lightgrayishblue1: 211, 68%, 94%;
+    --Lightgrayishblue2: 205, 33%, 90%;
+    --Grayishblue: 219, 14%, 63%;
+    --Darkgrayishblue: 219, 12%, 42%;
+    --Verydarkblue: 224, 21%, 14%;
+
+    /* font */
+    --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+    --fs-800: 3.5rem;
+    --fs-700: 2rem;
+    --fs-600: 1.5rem;
+    --fs-500: 1rem;
+    --fs-400: 0.9375rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+
+    /* font families */
+    --ff-serif: "Plus Jakarta Sans, sans-serif;";
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Plus Jakarta Sans", sans-serif;
+}
+
+
+@media (min-width: 35em) {
+    :root {
+        --fs-800: 5rem;
+        --fs-700: 2.5rem;
+        --fs-600: 1.5rem;
+        --fs-500: 1.25rem;
+        --fs-400: 1rem;
+    }
+}
+
+@media (min-width: 45em) {
+    :root {
+        /* font-sizes */
+        --fs-800: 6.25rem;
+        --fs-700: 3.5rem;
+        --fs-600: 1.5rem;
+        --fs-500: 1.75rem;
+        --fs-400: 1.125rem;
+    }
+}
+
+/* Reset start*/
+
+
+/* box sizing */
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+/* reset margins */
+body, h1, h2, h3, h4, h5, p, figure, picture {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* Body set-up */
+body {
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-300);
+    background-color: hsl(var(--white));
+    color: hsl(var(--Grayishblue));
+    line-height: 1.5;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    /* overflow: hidden; */
+}
+
+/* make images easier to work with */
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* make forms elements to work with */
+input, button, textarea, select {
+    font: inherit
+}
+
+/* Very important */
+/* remove animation */ 
+@media (prefers-reduced-motion: reduce) {
+    *, *::after, *::before {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;  
+    }
+}
+
+
+/* reset finished */
+
+
+/* Utility classes*/
+
+.flex {
+    display: flex;
+    gap: var(--gap, .5rem);
+}
+
+.flexD{
+    flex-direction: row;
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.d-block {
+    display: block;
+}
+
+.flow > * + * {
+    /* the lobotomized owl simply means that it's looking for child that has a sibling before it. AKA not the first child  */
+    margin-top: var(--flow-space, 1rem);
+   
+}
+
+.flow-space--small {
+    --flow-space: 1rem;
+}
+
+.container {
+    margin-block: 1em;
+    margin-inline: auto;
+    padding-inline: 1em;
+    padding-block: 1em;
+    max-width: 24rem;
+    border: none;
+    border-radius: 1em;
+    
+    /* important for controlling the spacing inside of a container */
+}
+
+.hidden {
+    display: none;
+}
+
+.padding-inline {
+    padding-inline: 1rem;
+    justify-content: space-between;
+}
+
+.padding-block {
+    padding-block: 2rem;
+}
+
+
+
+
+
+
+/* colors */
+
+.bg-blue {background-color: hsl(var(--blue));
+padding: .5rem;
+aspect-ratio: 1;
+border-radius: 20%;}
+.bg-accent {background-color: hsl(var(--lightblue));}
+.bg-white {background-color: hsl(var(--white));}
+
+.text-dark {color: hsl(var(--Verydarkblue));
+font-weight: 800;}
+.text-accent {color: hsl(var(--));}
+.text-white {color: hsl(var(--white));}
+
+/* typography */
+
+.ff-serif { font-family: var(--ff-serif); } 
+.ff-sans-cond { font-family: var(--ff-sans-cond); } 
+.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+
+.uppercase { text-transform: uppercase; }
+
+.fs-900 { font-size: var(--fs-900); }
+.fs-800 { font-size: var(--fs-800); }
+.fs-700 { font-size: var(--fs-700); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-300 { font-size: var(--fs-300); }
+.fs-200 { font-size: var(--fs-200); }
+
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.1;
+}
+
+
+
+.notificationBox{
+    flex-direction: column;
+    width: 80%;
+}
+
+.post {
+    color: hsl(var(--Darkgrayishblue));
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.post:hover {
+    color: hsl(var(--blue));
+}
+
+.link {
+text-decoration: none;
+color: var(--Darkgrayishblue);
+background-color: transparent;
+border: none;
+cursor: pointer;
+}
+.link:hover {
+    color: hsl(var(--blue));
+}
+
+.name {
+    text-decoration: none;
+    color: hsl(var(--Verydarkblue));
+    font-weight: 800;
+}
+.name:hover {
+    color: hsl(var(--blue));
+    
+}
+
+.messages {
+    border: 1px solid hsl(var(--Grayishblue));
+    padding: 1rem;
+    font-weight: 500;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.messages:hover {
+    background-color: hsl(var(--Lightgrayishblue1));
+}
+
+.unread {
+    background-color: hsl(var(--lightblue));
+    box-shadow: 5px 4px 17px 2px rgba(0,0,0,0.1);
+}
+
+.unreadDot::after {
+content: "🔴";
+}
+
+picture{
+    max-width: 15%;
+    padding-right: 1rem;
+}
+
+.imageContent{
+    max-width: 20%;
+    padding-left: 1rem;
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; 
+position: absolute;
+display: none;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (min-width: 600px) {
+    body{
+        background-color: hsl(var(--Lightgrayishblue2));
+        
+    }
+    main {
+        margin-inline: auto;
+        margin-block: 5rem;
+        max-width: 40rem;
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: 5px 4px 17px 2px rgba(0,0,0,0.1);
+        
+    }
+ .container {
+    max-width: 70rem;
+    margin: 1rem;
+ }
+  }
